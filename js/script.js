@@ -71,8 +71,9 @@ createApp({
                 this.activeImage = 0;
             }
 
-        }
+        },
         
+
     
     
     }
