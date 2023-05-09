@@ -85,4 +85,9 @@ createApp({
             this.timeAutoscrol = null;
         }
     },
+
+    mounted() {
+        console.log('benvenuto')
+        this.setAutoscrollOn()
+    },
 }).mount('#app')
