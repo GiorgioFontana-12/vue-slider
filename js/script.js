@@ -31,6 +31,7 @@ const { createApp } = Vue
 createApp({
     data() {
         return {
+            timeAutoscrol: null,
             activeImage: 0,
             slides: [
                     {
@@ -72,10 +73,16 @@ createApp({
             }
 
         },
-        
 
-    
-    
-    }
+        setAutoscrollOn(){
+            this.timeAutoscrol = setInterval(()=>{
+                this.nextSlide();
+            },2*1000);
+        },
 
+        setAutoscrollOff(){
+            clearInterval(this.timeAutoscrol);
+            this.timeAutoscrol = null;
+        }
+    },
 }).mount('#app')
